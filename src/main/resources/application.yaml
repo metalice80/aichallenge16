@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: day16-mcp-client
+  main:
+    web-application-type: none
+
+app:
+  mcp:
+    command: ${MCP_COMMAND:npx}
+    arguments:
+      - -y
+      - "@modelcontextprotocol/server-everything@2025.11.25"
+    request-timeout: 20s
+    demo-enabled: true
+
+logging:
+  level:
+    root: INFO
+    com.example.mcpday16: INFO
